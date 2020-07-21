@@ -1,0 +1,29 @@
+<div class="container-stars">
+  <mat-icon (click)="onClear()" *ngIf="_config.showClearBtn" class="clearBtn"
+    [ngStyle]="{'width': this._config.size,'height': this._config.size,'font-size':this._config.size,'cursor':(!_config.readOnly)?'pointer':'initial'}">
+    cancel
+  </mat-icon>
+
+  <ng-container *ngFor="let item of arrayFill">
+    <mat-icon (click)="onMark(item)" class="icon-star" [matTooltip]="item +' '+ this._config.label"
+      [ngClass]="{'starEmpty':!(rating < item && rating> (item-1))&&(rating < item)}"
+      [ngStyle]="{'color':this._config.colorFill,'width': this._config.size,'height': this._config.size,'font-size':this._config.size,'cursor':(!_config.readOnly)?'pointer':'initial'}">
+      <ng-container *ngIf="rating>=item">
+        start
+      </ng-container>
+      <ng-container *ngIf="(rating < item && rating> (item-1));else elseBlock">
+        star_half
+      </ng-container>
+      <ng-template #elseBlock>
+        <ng-container *ngIf="rating < item">
+          star_border
+        </ng-container>
+      </ng-template>
+    </mat-icon>
+  </ng-container>
+
+  <ng-container *ngIf="_config.showNumber">
+    &nbsp;<span style="transform: scale(0.8);" [ngStyle]="{'fontSize':this._config.size}">{{this.rating}}</span>
+  </ng-container>
+
+</div>
