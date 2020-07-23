@@ -1,27 +1,100 @@
 # NgpMaterialRating
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+Angular Library that uses material design icons for editing and showing rating variables.
+This library was generated with Angular CLI version 10.0.0.
 
-## Development server
+### Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```sh
+npm i ngp-material-rating --save
+```
 
-## Code scaffolding
+`NgpMaterialRating` requires [Angular Material](https://material.angular.io/guide/getting-started/).
+For angular version 8 or higher projects
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+ng add @angular/material
+```
 
-## Build
+Importing the BrowserAnimationsModule into your application enables Angular's animation system. Declining this will disable most of Angular Material's animations.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Usages
 
-## Running unit tests
+You must import the module `NgpMaterialRatingModule` where you will use it and use the component
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+***
+import { NgpMaterialRatingModule } from 'ngp-material-rating';
+@NgModule({
+  ***
+  imports: [
+    NgpMaterialRatingModule,
+  ],
+****
+})
+```
 
-## Running end-to-end tests
+In your component:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```html
+<ngp-material-rating [value]="rating"> </ngp-material-rating>
+```
 
-## Further help
+In .ts file
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+export class ExampleComponent {
+  rating = 4.5;
+}
+```
+
+![Image Rating](https://havanatursa.com/assets/images/npm/rating-image-1.PNG)
+
+### More configuration
+
+The `NgpRatingMaterialComponent` component has a setting to change icon size, fill color, mode (read-only), maximum number of icons, presentation tags, and an option to put a clear button online. The interface look like this:
+
+```typescript
+export interface MatStarConfig {
+  size?: string;
+  colorFill?: string;
+  label?: string;
+  readOnly?: boolean;
+  showNumber?: boolean;
+  showClearBtn?: boolean;
+  stars?: number;
+}
+```
+
+### More examples
+
+```typescript
+export class AppComponent {
+  title = "ngp-material-rating-test";
+  rating = 3.5;
+  ratingForm = new FormControl(2.5, [Validators.required]);
+
+  config1: MatStarConfig = {
+    size: "22px",
+    readOnly: true,
+    colorFill: "#fa4508",
+    stars: 20,
+  };
+
+  config2: MatStarConfig = {
+    size: "36px",
+    readOnly: false,
+    showClearBtn: true,
+    showNumber: true,
+  };
+}
+```
+
+```html
+<ngp-material-rating [config]="this.config1" [(ngModel)]="rating">
+</ngp-material-rating>
+<ngp-material-rating [config]="this.config2" [formControl]="ratingForm">
+</ngp-material-rating>
+```
+
+![Image Rating](https://havanatursa.com/assets/images/npm/rating-image-2.PNG)

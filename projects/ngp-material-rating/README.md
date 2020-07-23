@@ -37,7 +37,7 @@ import { NgpMaterialRatingModule } from 'ngp-material-rating';
 In your component:
 
 ```html
-<ngp-rating-material [value]="rating"> </ngp-rating-material>
+<ngp-material-rating [value]="rating"> </ngp-material-rating>
 ```
 
 In .ts file
@@ -91,10 +91,10 @@ export class AppComponent {
 ```
 
 ```html
-<ngp-rating-material [config]="this.config1" [(ngModel)]="rating">
-</ngp-rating-material>
-<ngp-rating-material [config]="this.config2" [formControl]="ratingForm">
-</ngp-rating-material>
+<ngp-material-rating [config]="this.config1" [(ngModel)]="rating">
+</ngp-material-rating>
+<ngp-material-rating [config]="this.config2" [formControl]="ratingForm">
+</ngp-material-rating>
 ```
 
 ![Image Rating](https://havanatursa.com/assets/images/npm/rating-image-2.PNG)
