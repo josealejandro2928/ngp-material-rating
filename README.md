@@ -48,7 +48,7 @@ export class ExampleComponent {
 }
 ```
 
-![Image Rating](https://havanatursa.com/assets/images/npm/rating-image-1.PNG)
+![Image Rating](https://movie-seat-booking-js.surge.sh/rating-image-1.PNG)
 
 ### More configuration
 
@@ -97,4 +97,4 @@ export class AppComponent {
 </ngp-material-rating>
 ```
 
-![Image Rating](https://havanatursa.com/assets/images/npm/rating-image-2.PNG)
+![Image Rating](https://movie-seat-booking-js.surge.sh/rating-image-2.PNG)
