@@ -1,10 +1,10 @@
 {
   "name": "ngp-material-rating",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "peerDependencies": {
-    "@angular/common": "^13.1.0",
-    "@angular/core": "^13.1.0",
-    "@angular/material": "^13.1.0"
+    "@angular/common": "^13.1.1",
+    "@angular/core": "^13.1.1",
+    "@angular/material": "^13.1.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"
