@@ -1,7 +1,7 @@
 # NgpMaterialRating
 
 Angular Library that uses material design icons for editing and showing rating variables.
-This library was generated with Angular CLI version 10.0.0.
+This library was generated with Angular CLI version 13.0.0.
 
 ### Installation
 
