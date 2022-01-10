@@ -1,0 +1,20 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contaier {
+  max-width: 1200px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0px 2px 2px  rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.p-container {
+  padding: 32px 15px;
+}
