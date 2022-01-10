@@ -9,7 +9,7 @@
       [ngClass]="{'starEmpty':!(rating < item && rating> (item-1))&&(rating < item)}"
       [ngStyle]="{'color':this._config.colorFill,'width': this._config.size,'height': this._config.size,'font-size':this._config.size,'cursor':(!_config.readOnly)?'pointer':'initial'}">
       <ng-container *ngIf="rating>=item">
-        start
+        star
       </ng-container>
       <ng-container *ngIf="(rating < item && rating> (item-1));else elseBlock">
         star_half
