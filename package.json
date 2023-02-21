@@ -47,5 +47,12 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.5.4"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/josealejandro2928/ngp-material-rating",
+  "readme": "https://github.com/josealejandro2928/ngp-material-rating#readme",
+  "author": "Jose Alejandro Concepcion Alvarez",
+  "bugs": {
+    "url": "https://github.com/josealejandro2928/ngp-material-rating/issues"
   }
 }
